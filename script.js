@@ -47,18 +47,22 @@ const utils = {
       }
           return sum / source.length;
   },
+
+  getMaxString: function getMaxString (source) {
+    let longString = '';
+    for (i = 0; i < source.length; i++) {
+      if (source[i].length > longString.length) {
+        longString = source[i];
+      }
+    }
+    return longString;
+  },
 };
-
-
-
-
-
-
 
 
  // ---------- REVERSE ------------
 
-  // let source = [1, 14, 'hello', true, 54422]; // array
+ // let source = [1, 14, 'hello', true, 54422]; // array
   // let source = 'hello, user';                 // string
 
   // console.log(source);
@@ -66,7 +70,7 @@ const utils = {
 
   // ---------- VERIFY NUMBER ------------
 
-  // let source = [1, 14, 'hello', true, 54422, NaN, '14565', null];
+  //let source = [1, 14, 'hello', true, 54422, NaN, '14565', null];
 
   // console.log(source);
   // console.log(utils.verifyNumber(source));
@@ -83,6 +87,13 @@ const utils = {
 
   // console.log(source);
   // console.log(utils.getAverage(source));
+
+  // ---------- GET MAX STRING ------------
+
+  // let source = ['hello, user', 'ololo', 'it is the longest string', 12];                 
+
+  // console.log(source);
+  // console.log(utils.getMaxString(source));
 
 
 
