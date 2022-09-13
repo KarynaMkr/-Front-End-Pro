@@ -34,9 +34,27 @@ const utils = {
           }
       }
       return minimum;
-  }
+  },
 
+  getAverage: function getAverage (source) {
+    let sum = 0;
+      for (let i = 0; i < source.length; i++) { 
+        if (source.length === 0 || typeof source[i] === 'string') {
+          return console.log('array empty or have string item, change it'); 
+        } else {
+          sum += source[i];
+          }
+      }
+          return sum / source.length;
+  },
 };
+
+
+
+
+
+
+
 
  // ---------- REVERSE ------------
 
@@ -53,23 +71,18 @@ const utils = {
   // console.log(source);
   // console.log(utils.verifyNumber(source));
 
-    // ---------- GET MIN NUMBER ------------
+  // ---------- GET MIN NUMBER ------------
 
-    let source = [1, 14, 13, 54422, NaN, null, 0, -7];
-    console.log(source);
-    console.log(utils.getMin(source));
-
-  // function getMin (source) {
-  //     let minimum = source[0];
-  //     for (let i = 0; i < source.length; i++) {
-  //         if (source[i] < minimum && !isNaN(source[i]) && source[i] !== null)  {
-  //           minimum = source[i];
-  //         }
-  //     }
-  //     return minimum;
-  // }
-
-  // let source = [1, 14, 13, 54422, NaN, null];
+  // let source = [1, 14, 13, 54422, NaN, null, 0, -7];
   // console.log(source);
-  // console.log(getMin(source));
+  // console.log(utils.getMin(source));
+
+  // ---------- GET AVERAGE ------------
+
+  // let source = [1, 3, 6, 8];
+
+  // console.log(source);
+  // console.log(utils.getAverage(source));
+
+
 
