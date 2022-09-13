@@ -27,7 +27,13 @@ const utils = {
     },
 
   getMin: function getMin (source) {
-
+    let minimum = source[0];
+      for (let i = 0; i < source.length; i++) {
+          if (source[i] < minimum && !isNaN(source[i]) && source[i] !== null)  {
+            minimum = source[i];
+          }
+      }
+      return minimum;
   }
 
 };
@@ -47,67 +53,23 @@ const utils = {
   // console.log(source);
   // console.log(utils.verifyNumber(source));
 
+    // ---------- GET MIN NUMBER ------------
 
-
-
-  // }
-
-  // ---------- REVERSE ARRAY ------------
-
-  // function reverseArray (source) {
-  //   let newArray = [];
-  //   for (let i = 0; i < source.length; i++) {
-  //     newArray[i] = source[(source.length - 1) - i]
-  //   }
-  //   return newArray;
-  // }
-
-  // let array = [1, 14, 'hello', true, 54422];
-  // let source1 = array;
-
-  // console.log(source);
-  // console.log(reverseArray(source));
-
-
-  // ---------- REVERSE STRING ------------ 
-
-
-  // function reverseString (source) {
-  //   let newString = '';
-  //   for (let i = source.length - 1; i >= 0; i--) {
-  //     newString += source[i]
-  //   }
-  //   return newString;
-  // }
-
-  // let string = 'hello';
-  // let source = string;
-
-  // console.log(source);
-  // console.log(reverseString(source));
-
-  // ---------- ONLY NUMBERS ------------
-
-  //   function verifyNumbers (sourse) {
-  //     let numArray = [];
-  //     for (let item of sourse) {
-  //       if (typeof item === 'number') {
-  //         numArray[numArray.length] = item;
-  //       }
-  //     }
-  //     return numArray;
-  //   };
-
-  // let array = [1, 14, 'hello', true, 54422];
-  // let source = array;
-
-  // console.log(source);
-  // console.log(verifyNumbers(source));
-
-    // ---------- MIN NUMBER ------------
+    let source = [1, 14, 13, 54422, NaN, null, 0, -7];
+    console.log(source);
+    console.log(utils.getMin(source));
 
   // function getMin (source) {
-    
-  // }  
+  //     let minimum = source[0];
+  //     for (let i = 0; i < source.length; i++) {
+  //         if (source[i] < minimum && !isNaN(source[i]) && source[i] !== null)  {
+  //           minimum = source[i];
+  //         }
+  //     }
+  //     return minimum;
+  // }
 
+  // let source = [1, 14, 13, 54422, NaN, null];
+  // console.log(source);
+  // console.log(getMin(source));
 
